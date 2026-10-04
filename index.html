@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Victoria - Mis XV Años" />
+    <meta property="og:description"
+        content="¡La cuenta regresiva ha comenzado! Descubre los detalles y confirma tu asistencia." />
+
+    <meta property="og:image" content="https://lunofest.github.io/15Victoria141126/assets/imagenes/miniatura.png" />
+    <meta property="og:url" content="https://lunofest.github.io/15Victoria141126/" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:image:type" content="image/png" />
+
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="s-maxage=3600">
+    <meta http-equiv="Cache-Control" content="max-age=3600">
+
+    <script src="cache.js"></script>
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;500;600;900&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css?v15">
+    <link rel="stylesheet" href="css/styles.css?v15">
+    <title>Mis 15 años</title>
+</head>
+
+<body>
+
+    <section  class="intro" id="intro">
+        <div class="intro__container">
+            <h1 class="intro__titulo">Victoria</h1>
+            <p class="intro__subtitulo">Mis XV Años</p>
+            <svg class="intro__flecha" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+                <path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" fill="none" />
+            </svg>
+            <img class="intro__sobre" src="assets/sobre.webp" alt="sobre" onclick="ingresar()">
+            <p class="intro__texto">Toca el sobre para ingresar</p>
+        </div>
+    </section>
+
+    <header class="header">
+
+        <div class="header__container">
+
+            <div class="header__name">MIS <span class="xv">XV</span> <br> VICTORIA</div>
+            <div class="temporizador">
+                <p class="temporizador__title">Falta muy poco</p>
+                <div class="temporizador__items">
+                    <div class="temporizador__item">
+                        <span id="dias">00</span>
+                        <span class="temporizador__label">Días</span>
+                    </div>
+                    <div class="temporizador__item">
+                        <span id="horas">00</span>
+                        <span class="temporizador__label">Horas</span>
+                    </div>
+                    <div class="temporizador__item">
+                        <span id="minutos">00</span>
+                        <span class="temporizador__label">Min</span>
+                    </div>
+                    <div class="temporizador__item">
+                        <span id="segundos">00</span>
+                        <span class="temporizador__label">Seg</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__arrow"></div>
+
+    </header>
+
+
+    <main>
+
+        <section class="frasePrincipal">
+
+            <img class="flor_img1" src="assets/luna.webp" alt="" class="flor">
+            <p class="frasePrincipal__texto">
+                Durante mucho tiempo imaginé esté día, lo
+                Soñé con música, luces, risas y abrazos.<br>
+                Hoy ese sueño se vuelve realidad y quiero
+                celebrarlo de la mejor manera, rodeada de
+                las personas que importan en mí vida.<br> Por
+                lo que no podía faltar tu presencia
+            </p>
+        </section>
+
+        <section class="cuando">
+            <img src="assets/iconos/cuando.svg" alt="" class="cuando__icono">
+            <h2 class="cuando__titulo">¿CUÁNDO?</h2>
+            <p class="cuando__fecha">14 de Noviembre de 2026</p>
+            <p class="cuando__hora">21:00 Hs.</p>
+        </section>
+
+        <section class="donde">
+
+            <img class="star_img1" src="assets/star.webp" alt="" class="flor">
+            <img src="assets/iconos/donde.svg" alt="" class="donde__icono">
+            <h2 class="donde__titulo">¿DONDE?</h2>
+            <p class="donde__direccion">SALÓN "SANTINO EVENTOS" <br> Av. Camino del Perú 1052, San Miguel de Tucumán,
+                <br> Tucumán.
+            </p>
+            <a href="https://maps.app.goo.gl/ZUGiqVsV67wG3bT2A" target="_blank" class="donde__btn">Ver ubicacion</a>
+
+            <img class="flor_img2" src="assets/flor2.webp" alt="" class="flor">
+        </section>
+
+        <section class="regalos">
+            <img src="assets/iconos/regalos.svg" alt="" class="regalos__icono">
+            <h2 class="regalos__titulo">REGALOS</h2>
+            <p class="regalos__texto">
+                Quiero que sepas que tu presencia es lo más importante en mi fiesta y si deseas hacerme un
+                presente, podrás dejarlo en mi mesa de regalos,
+                o colocar tu sobrecito en la urna en la entrada del salón, también podés hacerlo por transferencia a mi
+                cuenta...
+                y recuerda: <br> ¡Tu cariño es el mejor regalo que puedo recibir!
+            </p>
+            <button class="regalos__btn" onclick="toggleCuenta()">Ver cuenta</button>
+            <div class="regalos__cuenta" id="cuenta">
+                <p class="regalos__alias">ALIAS: maría.066.dulces.mp</p>
+                <button class="regalos__copiar" onclick="copiarAlias(this)">Copiar</button>
+                <p class="regalos__alias">CBU: 0000003100001301301319688</p>
+                <button class="regalos__copiar" onclick="copiarCBU(this)">Copiar</button>
+            </div>
+        </section>
+
+        <section class="agradecimiento block glow contenedor" data-aos="fade-up">
+
+            <img class="star_img1" src="assets/star.webp" alt="" class="flor">
+
+            <div class="agradecimiento__contenedor">
+                <p class="parrafo parrafo--agradecimiento">
+                    "Deseo expresar mi profundo agradecimiento a todos mis familiares y amigos que me acompañan en esta
+                    etapa, y quiero destacar el valioso
+                    sacrificio realizado especialmente por mis padres, cuyo apoyo fué fundamental para hacer realidad
+                    este momento tan significativo en mi vida"
+                </p>
+
+
+                <div class="agradecimiento__container">
+                    <h4 class="agradecimiento__title">Mis Padres</h4>
+                    <div class="agradecimiento__fotos" data-aos="fade-right">
+
+                        <div class="agradecimiento__picture">
+
+                  
+                            <h5 class="agradecimiento__name">Mariela y Victor</h5>
+                        </div>
+
+                      
+                    </div>
+                </div>
+
+
+   
+                
+            </div>
+
+
+        </section>
+
+        <section class="nombre">
+            <h2 class="nombre__texto">MIS <span class="nombre__xv">XV</span> <br> VICTORIA</h2>
+        </section>
+
+        <!-- <img class="foto" src="assets/foto1.webp" alt=""> -->
+
+        <section class="texto">
+            <p class="texto__frase">TE INVITO A FESTEJAR <br> ESTA NOCHE <span
+                    class="texto__destacado">INOLVIDABLE</span></p>
+        </section>
+
+        <section class="dresscode">
+            <img class="star_img1" src="assets/star.webp" alt="" class="flor">
+            <img class="flor_img3" src="assets/flor1.webp" alt="" class="flor">
+            <img src="assets/iconos/dresscode.svg" alt="" class="dresscode__icono">
+            <h2 class="dresscode__titulo">CÓDIGO DE VESTIMENTA</h2>
+            <p class="dresscode__texto">Elegante Formal <br> Colores Prohibidos: Gama de azul</p>
+
+             <div class="contenedor__colores">
+                <div class="contenedores__item"></div>
+                <div class="contenedores__item contenedores__item2"></div>
+            </div>
+        </section>
+
+        <section class="album" style="display: none;">
+            <img src="assets/iconos/album.svg" alt="" class="album__icono">
+            <h2 class="album__titulo">ETIQUÉTAME</h2>
+            <p class="album__texto">Podés compartir tus fotos y videos <br> de la fiesta en instagram y etiquétame</p>
+            <a href="https://www.instagram.com/lunodigitales?igsh=c241Z3d2Z2x0M2xs" target="_blank"
+                class="album__btn">@lunodigitales</a>
+        </section>
+
+      <section class="playlist">
+
+          <img class="star_img1" src="assets/star.webp" alt="" class="flor">
+      <img class="album__icono" src="assets/iconos/playlistICON.svg" alt="">
+      <h4 class="album__titulo">¿QUÉ CANCIONES NO PUEDEN FALTAR?</h4>
+      <h5 class="playlist__paragraph">¡Ayúdame sugiriendo las canciones que pensás que no pueden faltar en mi cumple!
+      </h5>
+
+      <div class="playlist__inputs">
+        <input class="playlist__input" type="text" id="nombre" placeholder="Tu nombre*" required>
+        <input class="playlist__input" type="text" id="cancion" placeholder="Nombre de la canción*" required>
+        <input class="playlist__input" type="text" id="link" placeholder="(opcional) link de YouTube, Spotify, etc">
+        <button class="album__btn" id="playlistbtn">ENVIAR RECOMENDACION</button>
+        <p id="error-mensaje" class="error-message"></p>
+      </div>
+
+        
+    </section>
+
+        <section class="confirmacion">
+            <img src="assets/iconos/confirmacion.svg" alt="" class="confirmacion__icono">
+            <h3 class="confirmacion__subtitulo">CONFIRMÁ TU ASISTENCIA</h3>
+            <p class="confirmacion__info">Recordá que tenes hasta el 03 de Noviembre para confirmar tu asistencia</p>
+            <form class="confirmacion__form" id="formConfirmacion">
+                <div class="confirmacion__radios">
+                    <label class="confirmacion__radio">
+                        <input type="radio" name="attendanceOption" value="SI ASISTIRÉ">
+                        <span class="confirmacion__radio-texto">Si Asistiré</span>
+                    </label>
+                    <label class="confirmacion__radio">
+                        <input type="radio" name="attendanceOption" value="NO ASISTIRÉ">
+                        <span class="confirmacion__radio-texto">No Asistiré</span>
+                    </label>
+                </div>
+
+                <label class="confirmacion__label">Nombre y apellido</label>
+                <input type="text" class="confirmacion__input" id="userFullName" placeholder="Nombre y apellido"
+                    required>
+
+                <label class="confirmacion__label">Si tenés una alimentación especial, indicanos cuál es:</label>
+                <div class="confirmacion__radios" style="flex-wrap: wrap; justify-content: center;">
+                    <label class="confirmacion__radio">
+                        <input type="radio" id="celiaca" name="alimenticioOption">
+                        <span class="confirmacion__radio-texto">Celíac@</span>
+                    </label>
+                    <label class="confirmacion__radio">
+                        <input type="radio" id="vegetariana" name="alimenticioOption">
+                        <span class="confirmacion__radio-texto">Vegetarian@</span>
+                    </label>
+                    <label class="confirmacion__radio">
+                        <input type="radio" id="hipertesion" name="alimenticioOption">
+                        <span class="confirmacion__radio-texto">Hipertensión</span>
+                    </label>
+                    <label class="confirmacion__radio">
+                        <input type="radio" id="diabetica" name="alimenticioOption">
+                        <span class="confirmacion__radio-texto">Diabétic@</span>
+                    </label>
+                    <label class="confirmacion__radio">
+                        <input type="radio" id="ninguna" name="alimenticioOption">
+                        <span class="confirmacion__radio-texto">Ninguna</span>
+                    </label>
+                </div>
+
+                <label class="confirmacion__label">Mensaje Opcional</label>
+                <textarea class="confirmacion__textarea" id="customMessage" placeholder="Mensaje opcional"></textarea>
+
+                <button type="button" class="confirmacion__btn" id="btnConfirmacion1">CONFIRMAR ASISTENCIA</button>
+                <button type="button" class="confirmacion__btn" id="btnConfirmacion2" style="display: none;">CONFIRMAR
+                    ASISTENCIA</button>
+            </form>
+        </section>
+
+        <section class="fraseFinal">
+            <img class="flor_img1" src="assets/luna.webp" alt="" class="flor">
+            <h2 class="fraseFinal__texto">Te espero!!!</h2>
+
+            <img class="flor_img4" src="assets/flor2.webp" alt="" class="flor">
+        </section>
+
+    </main>
+
+
+    <footer class="footer__final1">
+        <div class="footer__inner1">
+            <div class="footer__brand1">
+                <p class="footer__text1">
+                    Página creada por <strong>Luno Digitales</strong>
+                    para los 15 años de <strong>Victoria </strong>.<br>
+                    Todos los derechos reservados. <br>Visítanos en:
+                </p>
+
+            </div>
+
+
+            <a class="footer__site1" href="https://www.luno.net.ar" target="_blank" rel="noopener">www.luno.net.ar</a>
+            <div class="footer__social3">
+                <p class="footer__follow1">Síguenos en nuestras redes</p>
+                <a class="icon-link1"
+                    href="https://www.instagram.com/lunodigitales?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    aria-label="Instagram de Luno Digitales">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"
+                            fill="none" />
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" fill="none" />
+                        <circle cx="18.2" cy="5.8" r="0.7" fill="currentColor" />
+                    </svg>
+                </a>
+                <a class="icon-link1" href="https://www.facebook.com/profile.php?id=61581720891655" target="_blank"
+                    rel="noopener" aria-label="Facebook de Luno Digitales">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <style>
+        /* ///////////////// footer /////////////////////// */
+
+
+        .footer__final1 {
+            background: linear-gradient(180deg, #848484 0%, #000456 100%);
+            color: #ffffff;
+            padding: 1.5em 0;
+
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            font-size: 14px;
+            width: clamp(100px, 100%, 1800px);
+            text-align: center;
+            margin: 0 auto 0;
+        }
+
+        .footer__inner1 {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: center;
+            text-align: center;
+            padding: 0 1em;
+        }
+
+        .footer__text1 {
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .footer__text1 strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .footer__site1 {
+            display: inline-block;
+            margin-top: 8px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .footer__site1:hover {
+            text-decoration: underline;
+        }
+
+        .footer__social3 {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .footer__follow1 {
+            margin: 0;
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .footer__final1 .icon-link1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .footer__final1 .icon-link1 svg {
+            width: 28px !important;
+            height: 28px !important;
+            display: block;
+            margin: 0;
+        }
+
+        .footer__final1 .icon-link1:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+    <button class="floating-btn" id="floatingBtn" onclick="toggleMusica()">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <rect x="6" y="4" width="4" height="16" rx="1" />
+            <rect x="14" y="4" width="4" height="16" rx="1" />
+        </svg>
+    </button>
+
+    <script src="js/scrip.js?v15"></script>
+
+</body>
+
+</html>
